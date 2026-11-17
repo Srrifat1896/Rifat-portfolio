@@ -12,7 +12,7 @@
   });
 
   const skills = document.querySelector("#mini-skills");
-  const allSkills = [...new Set([...data.skills.map((skill) => skill.name), "Data Structures & Algorithms"])];
+  const allSkills = [...new Set([...data.skills.map((skill) => skill.name), ...data.profile.skillHighlights])];
   skills.innerHTML = allSkills.map((skill) => `<span>${skill}</span>`).join("");
 
   document.querySelector("#skill-bars").innerHTML = data.skills.map((skill) => `
@@ -36,6 +36,8 @@
     <div class="resume-column">
       <h3 class="resume-heading">Technical learning</h3><article class="timeline-entry"><h4>BUILDING PRACTICAL SKILLS</h4><p>Continuing to develop programming, database, web development, and software engineering foundations through coursework and project work.</p></article>
       <h3 class="resume-heading">Project experience</h3>${data.projects.map(projectEntry).join("")}
+      <h3 class="resume-heading">Course-related projects</h3>
+      ${data.academicProjects.map((project) => `<article class="timeline-entry compact-entry"><h4>${project.name}</h4><span class="date-pill ${project.status === "Completed" ? "" : "date-muted"}">${project.status}</span><p class="italic">${[project.semester, project.course].filter(Boolean).join(" · ") || "University course project"}</p><p>${project.technology}</p></article>`).join("")}
     </div>`;
 
   const interestIcons = {
@@ -45,9 +47,26 @@
     workflow: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-13h-7l0-7Z"/></svg>`,
     shield: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><rect x="9" y="10.5" width="6" height="5.5" rx="1"/><path d="M10.5 10.5V9a1.5 1.5 0 0 1 3 0v1.5"/></svg>`,
     brain: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5a3 3 0 0 0-5.7-1.2A3.4 3.4 0 0 0 4.5 9a3.5 3.5 0 0 0 1.2 6.5A3.2 3.2 0 0 0 12 17.2V4.5Z"/><path d="M12 4.5a3 3 0 0 1 5.7-1.2A3.4 3.4 0 0 1 19.5 9a3.5 3.5 0 0 1-1.2 6.5 3.2 3.2 0 0 1-6.3 1.7V4.5Z"/><path d="M8 8.5c1.4 0 2 .7 2 1.8M16 8.5c-1.4 0-2 .7-2 1.8M8 14c1.3-.2 2 .2 2 1.2M16 14c-1.3-.2-2 .2-2 1.2"/></svg>`,
+    book: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21V5.5Z"/><path d="M4 17.5A2.5 2.5 0 0 1 6.5 15H20M8 7h8M8 10h7"/></svg>`,
+    cart: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.2A2.3 2.3 0 0 0 9.5 16H18a2 2 0 0 0 1.9-1.4L22 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>`,
+    calendar: `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></svg>`,
+    gamepad: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9h11a4.5 4.5 0 0 1 4.3 5.8l-.8 2.6a2.6 2.6 0 0 1-4.3 1.1l-2.1-1.8h-5.2l-2.1 1.8A2.6 2.6 0 0 1 3 17.4l-.8-2.6A4.5 4.5 0 0 1 6.5 9Z"/><path d="M8 11v4M6 13h4M16 12h.01M18.5 14h.01"/></svg>`,
   };
   document.querySelector("#interest-grid").innerHTML = data.interests.map((item) => `
     <article class="interest-card"><span class="interest-icon" aria-hidden="true">${interestIcons[item.icon] || interestIcons.code}</span><h3>${item.title}</h3><p>${item.description}</p></article>`).join("");
+
+  document.querySelector("#academic-project-grid").innerHTML = data.academicProjects.map((project) => `
+    <article class="academic-card">
+      <div class="academic-card-top"><span class="academic-icon" aria-hidden="true">${interestIcons[project.icon]}</span><span class="academic-status"><span aria-hidden="true">${project.status === "Completed" ? "✓" : "•"}</span> ${project.status}</span></div>
+      <p class="academic-tech">${project.technology}</p>
+      <h3>${project.name}</h3>
+      ${project.semester || project.course ? `<p class="academic-course">${[project.semester, project.course].filter(Boolean).join(" · ")}</p>` : ""}
+      <p class="academic-description">${project.description}</p>
+      ${project.features.length ? `<ul class="academic-features">${project.features.map((feature) => `<li>${feature}</li>`).join("")}</ul>` : ""}
+    </article>`).join("");
+
+  document.querySelector("#certification-list").innerHTML = data.certifications.map((item) => `
+    <article class="certification-card"><span class="certification-icon" aria-hidden="true">${interestIcons.book}</span><div class="certification-copy"><h3>${item.title}</h3><p>${item.provider}</p><div class="certification-meta"><span>${item.duration}</span><span>Completed ${item.completed}</span></div></div></article>`).join("");
 
   const contactLinks = document.querySelector("#contact-links");
   const contacts = [];
@@ -79,6 +98,44 @@
     </article>`).join("");
 
   document.querySelector("#year").textContent = new Date().getFullYear();
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    const revealItems = document.querySelectorAll(".section-heading, .about-card, .skill-row, .resume-column, .interest-card, .project-card, .academic-card, .certification-card, .contact-card, .contact-form");
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -5% 0px" });
+    document.body.classList.add("motion-ready");
+    revealItems.forEach((item) => {
+      item.classList.add("scroll-reveal");
+      revealObserver.observe(item);
+    });
+  }
+
+  const themeToggle = document.querySelector("#theme-toggle");
+  let savedTheme = "light";
+  try {
+    savedTheme = localStorage.getItem("rifat-portfolio-theme") === "dark" ? "dark" : "light";
+  } catch { /* Use the light theme when browser storage is unavailable. */ }
+  const applyTheme = (theme) => {
+    document.documentElement.dataset.theme = theme;
+    const isDark = theme === "dark";
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    themeToggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+    themeToggle.title = isDark ? "Switch to light theme" : "Switch to dark theme";
+  };
+  applyTheme(savedTheme);
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+    try { localStorage.setItem("rifat-portfolio-theme", nextTheme); } catch { /* Theme still works for this visit. */ }
+  });
+
   const menu = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav");
   menu.addEventListener("click", () => {

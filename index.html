@@ -6,9 +6,6 @@
     <meta name="theme-color" content="#07141f" />
     <meta name="description" content="Portfolio of Md.Saif Al Mahmud Rifat, software engineering student at Daffodil International University." />
     <title>Md.Saif Al Mahmud Rifat — Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script src="data.js" defer></script>
     <script src="script.js" defer></script>
@@ -18,10 +15,15 @@
     <header class="site-header">
       <div class="nav-wrap">
         <a class="brand" href="#home" data-profile="shortName">Rifat</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
         <nav class="nav" id="site-nav" aria-label="Main navigation">
-          <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#resume">Resume</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a>
+          <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#resume">Resume</a><a href="#portfolio">Portfolio</a><a href="#academic-projects">Academic</a><a href="#certifications">Training</a><a href="#contact">Contact</a>
         </nav>
+        <div class="header-actions">
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" title="Switch to dark theme">
+            <span class="theme-sun" aria-hidden="true">☼</span><span class="theme-thumb" aria-hidden="true"></span><span class="theme-moon" aria-hidden="true">☾</span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -30,8 +32,9 @@
         <img class="hero-photo" src="assets/images/rifat%20profile%20pic.png" alt="" />
         <div class="hero-shade"></div>
         <div class="hero-content">
-          <h1 id="hero-title">I am <span data-profile="shortName">Rifat</span></h1>
-          <p class="hero-role"><span id="typed-role">a Software Engineering Student</span></p>
+          <h1 id="hero-title">Hi, I’m <span data-profile="shortName">Rifat</span></h1>
+          <p class="hero-role" data-profile="heroRole">Software Engineering Student &amp; Cybersecurity Enthusiast</p>
+          <p class="hero-tagline" data-profile="heroTagline">Building practical software projects and learning about cybersecurity.</p>
           <a class="hero-down" href="#about" aria-label="Scroll to About">⌄</a>
         </div>
       </section>
@@ -58,6 +61,7 @@
             <h2 class="underlined-title">About me</h2>
             <p>I’m <strong data-profile="fullName">Md.Saif Al Mahmud Rifat</strong>, a <strong data-profile="degree">BSc in Software Engineering</strong> student at <strong data-profile="university">Daffodil International University</strong>, currently in my <strong data-profile="semester">6th Semester</strong>.</p>
             <p>My main interests are software development and cybersecurity. I enjoy learning by building practical projects and strengthening the programming fundamentals behind them.</p>
+            <p data-profile="hobbies">Outside my studies, I enjoy football, cycling, outdoor adventures, and traveling.</p>
             <p>I’m working toward a career as a cybersecurity engineer. I’m still developing my skills, and I aim to represent my experience honestly as I continue to learn.</p>
           </div>
         </div>
@@ -81,6 +85,14 @@
       <section class="portfolio-section" id="portfolio">
         <div class="section-heading"><span class="section-kicker">SELECTED WORK</span><h2 class="underlined-title">Portfolio</h2><p>A closer look at the platforms I’m building and learning from.</p></div>
         <div class="project-grid" id="projects"></div>
+      </section>
+      <section class="academic-section" id="academic-projects">
+        <div class="section-heading"><span class="section-kicker">UNIVERSITY COURSEWORK</span><h2 class="underlined-title">Academic Projects</h2><p>Console-based Java (OOP) projects completed as part of university coursework.</p></div>
+        <div class="academic-grid" id="academic-project-grid"></div>
+      </section>
+      <section class="certifications-section" id="certifications">
+        <div class="section-heading"><span class="section-kicker">ADDITIONAL LEARNING</span><h2 class="underlined-title">Certifications &amp; Training</h2><p>Short courses and training that support my learning.</p></div>
+        <div class="certification-list" id="certification-list"></div>
       </section>
       <section class="contact-section" id="contact">
         <div class="contact-inner">
