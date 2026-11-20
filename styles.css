@@ -143,6 +143,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-card { display: flex; min-height: 88px; justify-content: center; align-items: center; gap: 38px; }
 .contact-item { display: flex; min-width: 0; align-items: center; gap: 12px; color: #183859; }
 .contact-icon { display: grid; flex: 0 0 38px; width: 38px; height: 38px; place-items: center; border: 1px solid #8bc8e3; border-radius: 50%; color: #0e8bb4; background: #f2f9fc; font-size: 14px; font-weight: 700; }
+.contact-icon svg { display: block; width: 18px; height: 18px; }
 .contact-item div { display: flex; min-width: 0; flex-direction: column; }
 .contact-item strong { font-size: 12px; }
 .contact-item small { color: #607080; font-size: 10px; overflow-wrap: anywhere; }

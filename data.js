@@ -73,7 +73,8 @@ window.portfolioData = {
   contact: {
     email: "mahmudrifat14@gmail.com",
     emailIsExample: false,
-    github: "",
+    github: "https://github.com/Srrifat1896",
+    whatsapp: "+8801331646458",
     linkedin: "",
   },
   projects: [
