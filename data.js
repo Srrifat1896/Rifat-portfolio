@@ -73,7 +73,6 @@ window.portfolioData = {
       duration: "4 training hours",
       completed: "April 2026",
       logo: "assets/images/wolfram-cloud-logo.png",
-      logoWide: true,
     },
     {
       title: "Free SQL Certification Course",
@@ -81,7 +80,6 @@ window.portfolioData = {
       duration: "Online certification course",
       completed: "March 30, 2026",
       logo: "assets/images/intellipaat-logo.svg",
-      logoWide: true,
     },
     {
       title: "CS301: Computer Architecture",
@@ -89,7 +87,6 @@ window.portfolioData = {
       duration: "48 hours | 91.67%",
       completed: "March 12, 2026",
       logo: "assets/images/saylor-org-logo.png",
-      logoExtraWide: true,
     },
     {
       title: "Computer Office Application",

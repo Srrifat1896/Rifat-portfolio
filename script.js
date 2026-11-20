@@ -74,7 +74,7 @@
     </article>`).join("");
 
   document.querySelector("#certification-list").innerHTML = data.certifications.map((item) => `
-    <article class="certification-card">${item.logo ? `<span class="certification-logo${item.logoExtraWide ? " certification-logo-extra-wide" : item.logoWide ? " certification-logo-wide" : ""}" aria-hidden="true"><img src="${item.logo}" alt="" loading="lazy" decoding="async" /></span>` : `<span class="certification-icon" aria-hidden="true">${interestIcons.book}</span>`}<div class="certification-copy"><h3>${item.title}</h3><p>${item.provider}</p><div class="certification-meta"><span>${item.duration}</span><span>Completed ${item.completed}</span></div></div></article>`).join("");
+    <article class="certification-card">${item.logo ? `<span class="certification-logo" aria-hidden="true"><img src="${item.logo}" alt="" loading="lazy" decoding="async" /></span>` : `<span class="certification-icon" aria-hidden="true">${interestIcons.book}</span>`}<div class="certification-copy"><h3>${item.title}</h3><p>${item.provider}</p><div class="certification-meta"><span>${item.duration}</span><span>Completed ${item.completed}</span></div></div></article>`).join("");
 
   const contactLinks = document.querySelector("#contact-links");
   const contacts = [];
