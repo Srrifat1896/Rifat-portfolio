@@ -1,10 +1,10 @@
 // Keep personal details and project content here so the portfolio is easy to update.
 window.portfolioData = {
   profile: {
-    fullName: "Md.Saif Al Mahmud Rifat",
+    fullName: "Md. Saif Al Mahmud Rifat",
     shortName: "Rifat",
-    heroRole: "Software Engineering Student & Cybersecurity Enthusiast",
-    heroTagline: "Building practical software projects and learning about cybersecurity.",
+    heroRole: "Software Engineering Student | Aspiring Cybersecurity Engineer",
+    heroTagline: "Building practical software and exploring cybersecurity.",
     degree: "BSc in Software Engineering",
     university: "Daffodil International University (DIU)",
     semester: "6th Semester",
@@ -22,18 +22,22 @@ window.portfolioData = {
     hobbies: "Outside my studies, I enjoy football, cycling, outdoor adventures, traveling, and going on outings with friends.",
   },
   skills: [
-    { name: "C", level: 48 }, { name: "C++", level: 50 },
-    { name: "Java (OOP)", level: 42 }, { name: "Python", level: 54 },
-    { name: "HTML", level: 60 }, { name: "CSS", level: 54 },
-    { name: "JavaScript", level: 47 }, { name: "MySQL", level: 43 },
+    { category: "Programming", icon: "code", status: "Coursework & practice", items: ["C", "C++", "Java (OOP)"] },
+    { category: "Frontend", icon: "browser", status: "Coursework & projects", items: ["HTML", "CSS", "JavaScript"] },
+    { category: "Python & Database", icon: "database", status: "Coursework & projects", items: ["Python", "MySQL"] },
+    { category: "Computer Science", icon: "layers", status: "Coursework & practice", items: ["Object-Oriented Programming", "Data Structures & Algorithms"] },
+    { category: "Development Tools", icon: "tools", status: "Project use", items: ["Git", "GitHub"] },
+    { category: "Cybersecurity", icon: "shield", status: "Learning the basics", items: ["Cybersecurity fundamentals"] },
   ],
   interests: [
-    { icon: "settings", title: "Software Engineering", description: "Learning to design and build software with clear structure and purpose." },
-    { icon: "python", title: "Python Development & Automation", description: "Exploring Python for practical applications and interested in using code to simplify repeatable tasks and workflows." },
-    { icon: "code", title: "Web Development", description: "Creating accessible, responsive interfaces and learning how web apps work." },
-    { icon: "shield", title: "Cybersecurity", description: "Currently learning the basics of cybersecurity and responsible development practices." },
+    { icon: "shield", title: "Cybersecurity Fundamentals", description: "Learning the basics of cybersecurity and responsible security practices." },
+    { icon: "shield", title: "Ethical Hacking", description: "Interested in learning ethical security testing in authorized environments." },
+    { icon: "code", title: "Network & Web Security", description: "Exploring network security and common web application security concepts." },
+    { icon: "settings", title: "Secure Software Development", description: "Learning how to consider security while designing and building software." },
+    { icon: "python", title: "Backend Development", description: "Building on project exposure and continuing to learn backend fundamentals." },
     { icon: "brain", title: "Artificial Intelligence", description: "Exploring AI fundamentals and how intelligent systems are built and used." },
     { icon: "gamepad", title: "Game Development", description: "Interested in exploring how interactive games are designed and built." },
+    { icon: "code", title: "Data Structures & Algorithms", description: "Practicing problem solving and algorithmic thinking, mainly with C++." },
   ],
   education: {
     admission: [
@@ -64,6 +68,24 @@ window.portfolioData = {
   ],
   certifications: [
     {
+      title: "Level 1 Certificate: Discrete Mathematics",
+      provider: "Wolfram U",
+      duration: "4 training hours",
+      completed: "April 2026",
+    },
+    {
+      title: "Free SQL Certification Course",
+      provider: "Intellipaat",
+      duration: "Online certification course",
+      completed: "March 30, 2026",
+    },
+    {
+      title: "CS301: Computer Architecture",
+      provider: "Saylor Academy",
+      duration: "48 hours | 91.67%",
+      completed: "March 12, 2026",
+    },
+    {
       title: "Computer Office Application",
       provider: "BRAC Institute of Skills Development (BISD)",
       duration: "1.5-month training",
@@ -73,6 +95,7 @@ window.portfolioData = {
   contact: {
     email: "mahmudrifat14@gmail.com",
     emailIsExample: false,
+    location: "Bangladesh",
     github: "https://github.com/Srrifat1896",
     whatsapp: "+8801331646458",
     telegram: "SrRifat96",
@@ -81,20 +104,22 @@ window.portfolioData = {
   projects: [
     {
       number: "01", name: "FinalWhistle", kind: "TOURNAMENT MANAGEMENT", status: "LIVE · DEPLOYED",
-      description: "A web-based platform designed to bring the moving parts of a football tournament into one organized place.",
+      problem: "Helps football communities organize tournaments, teams, and matches in one place.",
+      description: "A web-based football tournament management platform built for the football community.",
       features: ["Tournament organization", "Team and match management", "Built for the football community"],
       technologies: ["Python", "Django", "HTML", "CSS", "JavaScript", "SQLite"],
       url: "https://finalwhistlebd.pythonanywhere.com/",
-      cover: "assets/images/finalwhistle-cover.png",
+      cover: "assets/images/finalwhistle-cover.webp",
       visual: "finalwhistle",
     },
     {
       number: "02", name: "Falcon", kind: "COMMUNITY & FUND MANAGEMENT", status: "UNDER DEVELOPMENT",
-      description: "A private football community platform for coordinating members, weekly fundraising, payments, jerseys, and shared memories.",
+      problem: "Aims to bring football community membership, weekly fundraising, payments, jerseys, and shared memories together.",
+      description: "A football community platform currently under development.",
       features: ["Member management", "Weekly fundraising and payment tracking", "Jersey collections and memories"],
       technologies: ["Python", "Django", "HTML", "CSS", "JavaScript", "Database"],
       url: "", // Add a project URL independently if one becomes available.
-      cover: "assets/images/falcon-cover.png",
+      cover: "assets/images/falcon-cover.webp",
       visual: "falcon",
     },
   ],
