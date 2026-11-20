@@ -75,6 +75,7 @@ window.portfolioData = {
     emailIsExample: false,
     github: "https://github.com/Srrifat1896",
     whatsapp: "+8801331646458",
+    telegram: "SrRifat96",
     linkedin: "",
   },
   projects: [
