@@ -209,7 +209,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .project-meta { font-size: 9px; }
   .project-content h3 { font-size: 22px; }
   .contact-grid { gap: 14px; }
-  .contact-card { min-height: 74px; padding: 14px; }
+  .contact-card { display: grid; grid-template-columns: minmax(0, 1fr); justify-content: stretch; align-items: stretch; gap: 16px; min-height: 74px; padding: 16px; }
+  .contact-item { width: 100%; align-items: center; gap: 14px; }
+  .contact-item div { flex: 1 1 auto; }
+  .contact-item small { overflow-wrap: anywhere; word-break: normal; }
   .contact-form { padding: 18px 15px; }
   .form-row { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .contact-form label { margin-bottom: 12px; }
@@ -222,7 +225,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .profile-row { grid-template-columns: 1fr; }
   .profile-row img { width: min(160px, 56vw); aspect-ratio: 1 / 1; }
   .profile-details div { display: flex; }
-  .contact-card { justify-content: flex-start; }
+  .contact-card { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-height: 500px) and (orientation: landscape) {
