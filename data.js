@@ -90,6 +90,7 @@ window.portfolioData = {
       provider: "BRAC Institute of Skills Development (BISD)",
       duration: "1.5-month training",
       completed: "September 2024",
+      logo: "assets/images/bisd-logo.png",
     },
   ],
   contact: {
