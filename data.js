@@ -41,8 +41,8 @@ window.portfolioData = {
   ],
   education: {
     admission: [
-      { school: "Noakhali Science and Technology University", subject: "Soil, Water and Environmental Sciences" },
-      { school: "Pabna Science and Technology University", subject: "Urban and Regional Planning (URP)" },
+      { school: "Patuakhali Science and Technology University (PSTU)", subject: "Urban and Regional Planning (URP)" },
+      { school: "Noakhali Science and Technology University (NSTU)", subject: "Soil, Water and Environmental Sciences (SWES)" },
     ],
     secondary: [
       { award: "Higher Secondary Certificate (HSC)", school: "BAF Shaheen College, Kurmitola", board: "Dhaka", result: "GPA 5.00", year: "2022" },
@@ -94,6 +94,7 @@ window.portfolioData = {
       duration: "1.5-month training",
       completed: "September 2024",
       logo: "assets/images/bisd-logo.png",
+      logoTall: true,
     },
   ],
   contact: {

@@ -35,8 +35,10 @@
     <div class="resume-column">
       <h3 class="resume-heading">Profile</h3>
       <article class="timeline-entry"><h4>${data.profile.fullName}</h4><p class="italic">${data.profile.heroRole}</p><p>${data.profile.fullName} is a ${data.profile.degree} student at ${data.profile.university}, building practical software and developing a foundation in cybersecurity.</p><ul><li>${data.profile.problemSolving}</li><li>${data.profile.competitiveProgramming}</li><li>Career direction: software development with a long-term goal of cybersecurity engineering.</li></ul></article>
-      <h3 class="resume-heading">Education</h3>
+      <h3 class="resume-heading">Current Education</h3>
       <article class="timeline-entry"><h4>${data.profile.degree}</h4><span class="date-pill">EXPECTED GRADUATION · ${data.profile.expectedGraduation}</span><p class="italic">${data.profile.university}</p><p>Developing a foundation in software engineering through university study and independent practice.</p></article>
+      <h3 class="resume-heading">University Admission Achievements</h3>
+      <div class="admission-achievements">${data.education.admission.map((item) => `<article class="admission-achievement-card"><h4>${item.school}</h4><p><strong>Admitted subject:</strong> ${item.subject}</p></article>`).join("")}</div>
       <h3 class="resume-heading">Secondary Education</h3>
       ${data.education.secondary.map((item) => `<article class="timeline-entry compact-entry"><h4>${item.award}</h4><p class="italic">${item.school}</p><p>Board: ${item.board} · Result: ${item.result} · Passing year: ${item.year}</p></article>`).join("")}
       <h3 class="resume-heading">Relevant coursework</h3><article class="timeline-entry"><h4>SOFTWARE ENGINEERING STUDIES</h4><ul class="coursework-list">${data.coursework.map((course) => `<li>${course}</li>`).join("")}</ul></article>
@@ -74,7 +76,7 @@
     </article>`).join("");
 
   document.querySelector("#certification-list").innerHTML = data.certifications.map((item) => `
-    <article class="certification-card">${item.logo ? `<span class="certification-logo" aria-hidden="true"><img src="${item.logo}" alt="" loading="lazy" decoding="async" /></span>` : `<span class="certification-icon" aria-hidden="true">${interestIcons.book}</span>`}<div class="certification-copy"><h3>${item.title}</h3><p>${item.provider}</p><div class="certification-meta"><span>${item.duration}</span><span>Completed ${item.completed}</span></div></div></article>`).join("");
+    <article class="certification-card">${item.logo ? `<span class="certification-logo${item.logoTall ? " certification-logo-tall" : ""}" aria-hidden="true"><img src="${item.logo}" alt="" loading="lazy" decoding="async" /></span>` : `<span class="certification-icon" aria-hidden="true">${interestIcons.book}</span>`}<div class="certification-copy"><h3>${item.title}</h3><p>${item.provider}</p><div class="certification-meta"><span>${item.duration}</span><span>Completed ${item.completed}</span></div></div></article>`).join("");
 
   const contactLinks = document.querySelector("#contact-links");
   const contacts = [];

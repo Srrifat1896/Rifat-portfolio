@@ -112,6 +112,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .timeline-entry li { margin-bottom: 6px; }
 .date-pill { display: inline-block; max-width: 100%; margin: 0 0 3px; padding: 4px 10px; color: #263e4d; background: #e9f2f6; font-size: 11px; font-weight: 600; overflow-wrap: anywhere; }
 .date-muted { color: #687782; background: #f0f3f5; }
+.admission-achievements{display:grid;gap:10px;margin:0 0 20px}
+.admission-achievement-card{min-width:0;padding:14px 15px;border:1px solid #D5E7E8;border-left:3px solid #0F766E;border-radius:10px;background:#FFFFFF;box-shadow:0 6px 18px rgba(6,27,34,.05)}
+.admission-achievement-card h4{margin:0 0 6px;color:#102A33;font:700 13px/1.45 var(--head);overflow-wrap:anywhere}
+.admission-achievement-card p{margin:0;color:#52666D;font-size:12px;line-height:1.55;overflow-wrap:anywhere}
+.admission-achievement-card strong{color:#0F766E}
+html[data-theme="dark"] .admission-achievement-card{background:#103D47;border-color:#0F766E;box-shadow:0 8px 20px rgba(0,0,0,.14)}
+html[data-theme="dark"] .admission-achievement-card h4{color:#F8FAFC}
+html[data-theme="dark"] .admission-achievement-card p{color:#C4D5DA}
+html[data-theme="dark"] .admission-achievement-card strong{color:#22D3EE}
+@media(max-width:620px){.admission-achievements{gap:9px}.admission-achievement-card{padding:13px 14px}}
 .compact-entry { padding-bottom: 12px; }
 .compact-entry h4 { margin-bottom: 3px; }
 .compact-entry p { margin: 4px 0; }
@@ -444,6 +454,9 @@ html[data-theme="light"] #skills .problem-solving-highlight p{color:#52666D}
 @media(max-width:620px){.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:min(100%,420px);margin-inline:auto}.hero-button{min-width:0;padding-inline:9px;font-size:12px}.hero-button:last-child{grid-column:1/-1}}
 .certification-logo{box-sizing:border-box;display:grid;flex:0 0 120px;width:120px;height:48px;place-items:center;padding:4px;border:1px solid #E5F2F3;border-radius:10px;background:#FFFFFF}
 .certification-logo img{display:block;width:100%;height:100%;object-fit:contain}
+.certification-logo-tall{height:80px}
+@media(max-width:620px){.certification-logo-tall{height:70px}}
+@media(max-width:360px){.certification-logo-tall{height:62px}}
 @media(max-width:620px){.certification-logo{flex-basis:92px;width:92px;height:42px;padding:3px}}
 @media(max-width:360px){.certification-logo{flex-basis:76px;width:76px;height:38px}}
 
