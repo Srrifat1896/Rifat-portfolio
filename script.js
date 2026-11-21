@@ -38,7 +38,8 @@
       <h3 class="resume-heading current-education-heading">Current Education</h3>
       <article class="timeline-entry current-education-entry"><h4>${data.profile.degree}</h4><span class="date-pill">EXPECTED GRADUATION · ${data.profile.expectedGraduation}</span><p class="italic">${data.profile.university}</p><p>Developing a foundation in software engineering through university study and independent practice.</p></article>
       <h3 class="resume-heading">University Admission Achievements</h3>
-      ${data.education.admission.map((item) => `<article class="timeline-entry compact-entry admission-entry"><h4>${item.school}</h4><p><span class="admission-subject-label">Admission opportunity for:</span> ${item.subject}</p></article>`).join("")}
+      <p class="admission-intro">I received admission opportunities in these programs:</p>
+      ${data.education.admission.map((item) => `<article class="timeline-entry compact-entry admission-entry"><h4>${item.school}</h4><p class="italic">Subject: ${item.subject}</p></article>`).join("")}
       <h3 class="resume-heading">Secondary Education</h3>
       ${data.education.secondary.map((item) => `<article class="timeline-entry compact-entry"><h4>${item.award}</h4><p class="italic">${item.school}</p><p>Board: ${item.board} · Result: ${item.result} · Passing year: ${item.year}</p></article>`).join("")}
       <h3 class="resume-heading">Relevant coursework</h3><article class="timeline-entry"><h4>SOFTWARE ENGINEERING STUDIES</h4><ul class="coursework-list">${data.coursework.map((course) => `<li>${course}</li>`).join("")}</ul></article>
