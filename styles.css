@@ -115,8 +115,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .admission-entry{padding-bottom:12px}
 .admission-entry h4{font-size:13px}
 .admission-entry p{line-height:1.55;overflow-wrap:anywhere}
-.admission-subject-label{color:#0F766E;font-weight:700}
-html[data-theme="dark"] .admission-subject-label{color:#22D3EE}
+.admission-subject-label{color:inherit;font-weight:700}
+.current-education-heading,.current-education-entry h4{color:#0F766E}
+.current-education-entry .italic{color:#0F766E}
+.current-education-entry .date-pill{color:#0F766E;background:#E5F2F3}
+html[data-theme="dark"] .current-education-heading,html[data-theme="dark"] .current-education-entry h4,html[data-theme="dark"] .current-education-entry .italic{color:#22D3EE}
+html[data-theme="dark"] .current-education-entry .date-pill{color:#061B22;background:#22D3EE}
 .compact-entry { padding-bottom: 12px; }
 .compact-entry h4 { margin-bottom: 3px; }
 .compact-entry p { margin: 4px 0; }

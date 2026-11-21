@@ -35,8 +35,8 @@
     <div class="resume-column">
       <h3 class="resume-heading">Profile</h3>
       <article class="timeline-entry"><h4>${data.profile.fullName}</h4><p class="italic">${data.profile.heroRole}</p><p>${data.profile.fullName} is a ${data.profile.degree} student at ${data.profile.university}, building practical software and developing a foundation in cybersecurity.</p><ul><li>${data.profile.problemSolving}</li><li>${data.profile.competitiveProgramming}</li><li>Career direction: software development with a long-term goal of cybersecurity engineering.</li></ul></article>
-      <h3 class="resume-heading">Current Education</h3>
-      <article class="timeline-entry"><h4>${data.profile.degree}</h4><span class="date-pill">EXPECTED GRADUATION · ${data.profile.expectedGraduation}</span><p class="italic">${data.profile.university}</p><p>Developing a foundation in software engineering through university study and independent practice.</p></article>
+      <h3 class="resume-heading current-education-heading">Current Education</h3>
+      <article class="timeline-entry current-education-entry"><h4>${data.profile.degree}</h4><span class="date-pill">EXPECTED GRADUATION · ${data.profile.expectedGraduation}</span><p class="italic">${data.profile.university}</p><p>Developing a foundation in software engineering through university study and independent practice.</p></article>
       <h3 class="resume-heading">University Admission Achievements</h3>
       ${data.education.admission.map((item) => `<article class="timeline-entry compact-entry admission-entry"><h4>${item.school}</h4><p><span class="admission-subject-label">Admission opportunity for:</span> ${item.subject}</p></article>`).join("")}
       <h3 class="resume-heading">Secondary Education</h3>
