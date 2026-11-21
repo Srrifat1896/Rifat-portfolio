@@ -112,16 +112,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .timeline-entry li { margin-bottom: 6px; }
 .date-pill { display: inline-block; max-width: 100%; margin: 0 0 3px; padding: 4px 10px; color: #263e4d; background: #e9f2f6; font-size: 11px; font-weight: 600; overflow-wrap: anywhere; }
 .date-muted { color: #687782; background: #f0f3f5; }
-.admission-achievements{display:grid;gap:10px;margin:0 0 20px}
-.admission-achievement-card{min-width:0;padding:14px 15px;border:1px solid #D5E7E8;border-left:3px solid #0F766E;border-radius:10px;background:#FFFFFF;box-shadow:0 6px 18px rgba(6,27,34,.05)}
-.admission-achievement-card h4{margin:0 0 6px;color:#102A33;font:700 13px/1.45 var(--head);overflow-wrap:anywhere}
-.admission-achievement-card p{margin:0;color:#52666D;font-size:12px;line-height:1.55;overflow-wrap:anywhere}
-.admission-achievement-card strong{color:#0F766E}
-html[data-theme="dark"] .admission-achievement-card{background:#103D47;border-color:#0F766E;box-shadow:0 8px 20px rgba(0,0,0,.14)}
-html[data-theme="dark"] .admission-achievement-card h4{color:#F8FAFC}
-html[data-theme="dark"] .admission-achievement-card p{color:#C4D5DA}
-html[data-theme="dark"] .admission-achievement-card strong{color:#22D3EE}
-@media(max-width:620px){.admission-achievements{gap:9px}.admission-achievement-card{padding:13px 14px}}
+.admission-entry{padding-bottom:12px}
+.admission-entry h4{font-size:13px}
+.admission-entry p{line-height:1.55;overflow-wrap:anywhere}
+.admission-subject-label{color:#0F766E;font-weight:700}
+html[data-theme="dark"] .admission-subject-label{color:#22D3EE}
 .compact-entry { padding-bottom: 12px; }
 .compact-entry h4 { margin-bottom: 3px; }
 .compact-entry p { margin: 4px 0; }

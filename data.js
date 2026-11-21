@@ -41,8 +41,8 @@ window.portfolioData = {
   ],
   education: {
     admission: [
-      { school: "Patuakhali Science and Technology University (PSTU)", subject: "Urban and Regional Planning (URP)" },
       { school: "Noakhali Science and Technology University (NSTU)", subject: "Soil, Water and Environmental Sciences (SWES)" },
+      { school: "Patuakhali Science and Technology University (PSTU)", subject: "Urban and Regional Planning (URP)" },
     ],
     secondary: [
       { award: "Higher Secondary Certificate (HSC)", school: "BAF Shaheen College, Kurmitola", board: "Dhaka", result: "GPA 5.00", year: "2022" },
